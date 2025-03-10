@@ -103,3 +103,21 @@ Los **basados en nombres** utilizan una sola IP para varios dominios, requiere l
 #### 2.10. Host virtuales basados en puertos.
 Se configura Apache para que responda a varios puertos en la misma dirección IP, dependiendo del puerto que se accede, se daun contenido diferente. Su problema es que se deben abrir puertos adicionales, puede haber problemas con cortafuegos.
 
+### 3. FTP.
+
+#### 3.1. Introducción.
+Protocolo de transferencia entre archivos en una red TCP/IP. Transfiere información en texto plano, por lo que hace vulnerable la seguridad, pero se usa SFTP, SCP o SSL para mayor seguridad. Se suele usar para alojar webs o para Backups.
+
+#### 3.2. Diferencia activa y pasiva.
+En una activa, el cliente abre un puerto y escucha, conectándose el servidor a él. En una pasiva, el cliente se conecta al puerto que abre el servidor.
+
+#### 3.3. Tipos de usuarios.
+* **Anónimos**, acceden con *"anonymous"* y con la contraseña de un mail, usados para descargas públicas, aceso limitado y controlado.
+* **Autenticados**, usuarios del SO, requieren usuario y contraseña y se conectan al `$HOME` en Linux.
+* **Virtuales**, no relacionados al SO, tienen un home propio y se usan para mejorar la seguridad.
+
+#### 3.4. Tipos de transferencia.
+Tenemos los binarios y los de texto.
+
+#### 3.5. ¿Qué es enjaular?
+Restringir o lomitar acceso de un usuario o proceso a un área del sistema. Medida de seguridad usada para proteger el sistema y evitar usuarios malintencionados.
